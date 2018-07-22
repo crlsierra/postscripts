@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    {% for post in site.posts limit:10 %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}" {% if page.title==post.title %} class="active" {% endif %}>{{ post.title }}</a></li>
+                    {% endfor %}
+                    <li><a href="{{ "/allposts" | prepend: site.baseurl }}">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>{{ page.title }}</h1>
+            <!-- <p>{{ page.date | date: "%Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.journal %} • {{ page.journal }}{% endif %} {% if page.doi %} | doi:{{ page.doi }}{% endif %} </p> -->
+        <p>
+        {% assign authorCount = page.authors | size %}
+        {% if authorCount == 0 %}
+            No author
+        {% elsif authorCount == 1 %}
+            {{ page.authors | first }}
+        {% else %}
+            {% for author in page.authors %}
+                {% if forloop.first %}
+                    {{ author }}
+                {% elsif forloop.last %}
+                    and {{ author }}
+                {% else %}
+                    , {{ author }}
+                {% endif %}
+            {% endfor %}
+        {% endif %} 
+        </p>
+        <p>
+        {% if page.journal %} {{ page.journal }}{% endif %}{% if page.volume %}, {{page.volume}}{% endif %}{% if page.pages %}, {{page.pages}} {% endif %}{% if page.doi %}, doi:{{ page.doi }}{% endif %}, {{ page.date | date: "%Y" }}
+        </p>
+        
+            <div  id="markdown-content-container">
+              {% if page.repository %}
+              <h2> Abstract </h2>
+               {{ page.abstract }}
+
+              <h2> Source files</h2>
+              All source files can be obtained from the repository <a href="{{ page.repository }}"><i class="fa fa-git"></i></a>.
+              {% endif %}
+              
+              {% if page.preprint %}
+              <h2> Preprint </h2>
+              A copy of the accepted version of the manuscript without copy-editing from the journal can be obtained here <a href="{{ page.repository }}{{ page.preprint }}"><i class="fa fa-file"></i></a>
+              {% endif %}
+              
+              {% if page.puburl %}
+              <h2> Full text </h2>
+              A pay-per-view copy can be found at the publishers website <a href="{{ page.puburl }}"><i class="fa fa-money"></i></a>.
+              {% endif %}
+              
+              <h2> Contact author </h2>
+              
+              For additional information, contact:
+              
+              <a href="mailto:{{page.email}}"> {{page.contact}}</a>
+              
+              
+              <h2> Metrics and social media </h2>
+              
+              <div class='altmetric-embed' data-badge-type='medium-donut' data-badge-details='right' data-doi='{{page.doi}}'></div>
+              <div><a href="https://plu.mx/plum/a/?doi={{page.doi}}" class="plumx-plum-print-popup"></a></div>
+
+              <h2> Comments or questions? </h2>
+            </div>
+            <hr>
+            <ul class="pager">
+                {% if page.previous %}
+                <li class="previous">
+                    <a href="{{ page.previous.url | prepend: site.baseurl }}">
+                        <span aria-hidden="true">&larr;</span> Older
+                    </a>
+                </li>
+                {% endif %} {% if page.next %}
+                <li class="next">
+                    <a href="{{ page.next.url | prepend: site.baseurl }}">
+                      Newer <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+</div>

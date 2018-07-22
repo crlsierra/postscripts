@@ -1,0 +1,17 @@
+---
+title: Publications
+layout: default
+sectionid: blog
+---
+
+
+<div class="container">
+    <div class="inner-content">
+        <h1>All Publications</h1> {% for page in site.posts %}
+        <p>
+            <strong><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></strong>
+            <span> {{page.journal}} | {{ page.date | date: "%Y" }} | doi:{{page.doi}} </span>
+        </p>
+        {% endfor %}
+    </div>
+</div>
