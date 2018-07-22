@@ -1,6 +1,6 @@
-# Jekyll Doc Theme
+# Postscripts
+This repository contains all source files for the postscripts project.
 
-Go to [the website](https://aksakalli.github.io/jekyll-doc-theme/) for detailed information and demo.
 
 ## Running locally
 
@@ -11,8 +11,8 @@ You need Ruby and gem before starting, then:
 gem install bundler
 
 # clone the project
-git clone https://github.com/aksakalli/jekyll-doc-theme.git
-cd jekyll-doc-theme
+git clone https://github.com/crlsierra/postscripts.git
+cd postscrips
 
 # run jekyll with dependencies
 bundle exec jekyll serve
