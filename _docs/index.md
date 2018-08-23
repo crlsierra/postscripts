@@ -6,13 +6,16 @@ redirect_from: /docs/index.html
 
 ## Getting started
 
-[GitHub Pages](https://pages.github.com) can automatically generate and serve the website for you.
-Let's say you have a username/organisation `my-org` and project `my-proj`; if you locate Jekyll source under `docs` folder of master branch in your repo `github.com/my-org/my-proj`, the website will be served on `my-org.github.io/my-proj`.
-The good thing about coupling your documentation with the source repo is, whenever you merge features with regarding content to master branch, it will also be published on the webpage instantly.
+Postprints is a [Git](https://git-scm.com/) repository hosted on [GitHub](https://github.com/) containing metadata of published articles with links to source code and other material. 
+We use [GitHub Pages](https://pages.github.com) to automatically generate and serve the website.
+The site is compiled using [Jekyll](https://jekyllrb.com/), which you can run locally in your own computer. 
 
-1. Just [download the source](https://github.com/aksakalli/jekyll-doc-theme/archive/gh-pages.zip) into your repo under `docs` folder.
-2. Edit site settings in  `_config.yml` file according to your project. !!! `baseurl` should be your website's relative URI like `/my-proj` !!!
-3. Replace `favicon.ico` and `img/logonav.png` with your own logo.
+
+1. Clone the [repository](https://github.com/crlsierra/postscripts) into your local computer using `git clone https://github.com/crlsierra/postscripts.git`.
+2. Go to the new folder `cd postscripts`
+3. Run `bundle exec jekyll serve`
+4. Open your web browser and go to the server address indicated by Jekyll.
+
 
 ## Writing content
 
