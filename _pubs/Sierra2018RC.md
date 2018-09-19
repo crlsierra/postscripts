@@ -7,6 +7,8 @@ contact: Carlos A. Sierra
 email: csierra@bgc-jena.mpg.de
 journal: Radiocarbon
 doi: 10.1017/RDC.2018.33
+volume: 60
+pages: 1055-1066
 puburl: https://www.cambridge.org/core/journals/radiocarbon/article/forecasting-atmospheric-radiocarbon-decline-to-prebomb-values/64F08C86C11468E28EE3FEF60EDE7C4F
 repository: https://github.com/crlsierra/AtmosphericC14
 preprint: /raw/master/Radiocarbon.pdf 

@@ -19,35 +19,32 @@ The site is compiled using [Jekyll](https://jekyllrb.com/), which you can run lo
 
 ## Writing content
 
-### Docs
+### Postprints of published articles
 
-Docs are [collections](https://jekyllrb.com/docs/collections/) of pages stored under `_docs` folder. To create a new page:
+Metadata about published artciles are stored under `_pubs` folder. To create a new page:
 
-**1.** Create a new Markdown as `_docs/my-page.md` and write [front matter](https://jekyllrb.com/docs/frontmatter/) & content such as:
+**1.** Create a new Markdown as `_pubs/my-article.md` and write [front matter](https://jekyllrb.com/docs/frontmatter/) & content such as:
 
-```
+```yaml
 ---
-title: My Page
+title: Paper title
+doi: 1015/00112233
+author:
+  - First and Last Name of First Author
+  - First and Last Name of Coauthor
+  - First and Last Name of Coauthor
+contact: Contact Author
+email: Email of Contact Author
+journal: Journal Name
+volume: xx
+pages: yy-zz
+puburl: URL of publisher where the paper is hosted
+repository: URL of git repository cotaining all other article files, including a final pre-print of the paper
+preprint: Link to the paper relative to the URL of the repository
+abstract: "Complete paper abstract"
 permalink: /docs/my-page/
 ---
-
-Hello World!
 ```
 
-**2.** Add the pagename to `_data/docs.yml` file in order to list in docs navigation panel:
+Once your done send a pull request.
 
-```
-- title: My Group Title
-  docs:
-  - my-page
-```
-
-### Blog posts
-
-Add a new Markdown file such as `2017-05-09-my-post.md` and write the content similar to other post examples.
-
-### Pages
-
-The homepage is located under `index.html` file. You can change the content or design completely different welcome page for your taste. (You can use [bootstrap components](http://getbootstrap.com/components/))
-
-In order to add a new page, create a new `.html` or `.md` (markdown) file under root directory and link it in `_includes/topnav.html`.
