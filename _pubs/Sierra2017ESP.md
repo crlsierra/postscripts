@@ -1,7 +1,7 @@
 ---
 layout: pubs
 title:  "Monitoring ecological change during rapid socio-economic and political transitions: Colombian ecosystems in the post-conflict era"
-date:   2018-07-27 09:41:09
+date:   2017-07-27 09:41:09
 authors: 
  - Carlos A. Sierra
  - Miguel Mahecha
