@@ -11,8 +11,8 @@ contact: Carlos A. Sierra
 email: csierra@bgc-jena.mpg.de
 journal: Global Biogeochemical Cycles
 doi: 10.1029/2018GB005950
-volume: n 
-pages: n
+volume: 32 
+pages: 1574–1588
 puburl: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GB005950
 repository: https://git.bgc-jena.mpg.de/csierra/Persistence
 preprint: /raw/master/PersistenceR2.pdf
